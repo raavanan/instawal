@@ -34,15 +34,24 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    
+  $scope.images = [
+    { img: '../img/apple_baby.png', name:'Apple Baby', id: 1 },
+    { img: '../img/Ellie-Instagram.jpg',name:'Ellie', id: 2 },
+    { img: '../img/IMG_0002.JPG',name:'Happy to see you', id: 3 },
+    { img: '../img/vessel.jpg',name:'How did I get here', id: 4 },
+    { img: '../img/sipky.jpg',name:'My spikes', id: 5 }    
   ];
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+    console.log($stateParams.playlistId);
+    $scope.id = $stateParams.playlistId;
+    $scope.image = [
+    { img: '../img/apple_baby.png', name:'Apple Baby', id: 1 },
+    { img: '../img/Ellie-Instagram.jpg',name:'Ellie', id: 2 },
+    { img: '../img/IMG_0002.JPG',name:'Happy to see you', id: 3 },
+    { img: '../img/vessel.jpg',name:'How did I get here', id: 4 },
+    { img: '../img/sipky.jpg',name:'My spikes', id: 5 }    
+  ];
 })
